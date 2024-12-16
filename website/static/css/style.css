@@ -1,8 +1,21 @@
-
-.background-container {
-    margin-top: 80px;
+*{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+
+}
+
+.body{
+    width: 100%;
+    height: 100vh;
+}
+
+.background-container{
+    padding-top: 0;
+    padding-bottom: 30px;
+    margin-top: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -12,7 +25,7 @@
     background: #363636;
 }
 
-.intro-image {
+.intro-image{
     width: 100%;
     height: auto;
     display: block;
@@ -22,30 +35,7 @@
 
 /* used in gallery page */
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #434343;
-}
-
-.text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-} 
-
-.gallery {
+.gallery{
     margin-top: 120px;
     margin-bottom: 40px;
     background: #363636;
@@ -56,16 +46,181 @@
     z-index: 1;
 }
 
-.gallery-item {
+.gallery-item{
     display: block;
     border-style: solid;
     border-width: 1px;
     flex-grow: 800px;
     box-shadow:-12px 12px 30px black;
+    line-height: 0; /*got rid of extra space between border and image*/
 }
   
-.gallery-item:hover {
+.gallery-item:hover{
     filter: brightness(60%);
     transform: scale(1.025);
+}
+
+.contact-background{
+    padding-top: 80px;
+}
+
+.aboutme-background{
+    padding-top: 100px;
+}
+
+.aboutme-box{
+    display: flex;
+    align-items: center;
+}
+
+.description{
+    padding: 20px 50px 20px 50px;
+    background-color: #a4a3a3;
+    border-radius: 20px;
+    margin: 150px;
+    box-shadow:-12px 12px 30px black;
+}
+.header-box{
+    text-align: center;
+}
+
+.paragraph-box{
+    max-width: 100;
+    height: auto;
+    padding: 20px 60px 20px 60px;
+    text-align: center;
+}
+
+.aboutme-img{
+    max-width: 300;
+    height:auto;
+    padding: 0;
+    margin: 20px;
+    box-shadow:-12px 12px 30px black;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.container:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../static/images/JozArtBackground.jpg") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.content-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 19px 5px;
+}
+
+.left{
+    height: 100%;
+    background: url("../static/images/Joz Art Website Images/Joz_Art_5.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.right{
+    padding: 25px 40px;
+}
+
+h2{
+    position: relative;
+    padding-bottom: 25px 40px;
+    margin-bottom: 10px;
+}
+
+h2:after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color:#363636;
+}
+
+.field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover{
+    background-color: #a4a3a3;
+}
+
+.field:focus{
+    background-color: grey;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.area{
+    min-height: 150px
+}
+
+.btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #d6d6d6;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgb(138, 138, 138);
+
+}
+
+.contact-box{
+    background-color: #363636;
+    display: flex;
+    overflow: hidden;
+}
+
+.contact-image{
+    display: block;
+    border: none;
+    overflow: hidden;
+
+}
+
+
+
+
+@media screen and (max-width:880px){
+    .content-box {
+        grid-template-columns: 1fr;
+    }
+    .left {
+        height: 200px;
+    }
 }
 
